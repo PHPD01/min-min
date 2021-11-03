@@ -27,7 +27,7 @@ const Comment=()=>{
                     />
                       <FaStar className='star'
                        color={ ratingValue <=( hover || rating)  ? "#FFDC35":"#D0D0D0" }
-                       size={50}
+                       size={40}
                        onMouseEnter={()=>setHover(ratingValue)}
                        onMouseLeave={()=>setHover(null)}    />
                 </label>
