@@ -23,7 +23,7 @@ class Storelist extends React.Component {
 
           <Row>
             <Col>
-              <Bookmarks /> 
+              <Bookmarks data={data} /> 
             </Col>
           </Row>
         </Container>

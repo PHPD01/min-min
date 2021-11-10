@@ -10,19 +10,17 @@ import Female from './icon/female.png';
 import Axios from 'axios';
 function Share() {
 
-    const[movieReviewList,setMovieList]=useState([])
+    const [movieReviewList, setMovieList] = useState([]);
 
 
 
 
-    useEffect(()=>{
-        Axios.post('http://localhost:3001/user-share').then((response)=>{
-            setMovieList(response.data)
-            
-        })
-
-    },[])
-
+    useEffect(() => {
+        Axios.get('http://localhost:3001/api/get').then((response) => {
+            setMovieList(response.data);
+            console.log(response.data)
+        });
+    }, []);
 
     return (
         <div>
@@ -30,7 +28,7 @@ function Share() {
 
 
 
-            <Container className="border border-info d-flex flex-column "  >
+            <Container className=" d-flex flex-column "  >
 
                 <Row className="border border-info p-2 " >
                     <Col className="border border-info p-1 bg-warning  " xs={3} xl={1}  >
@@ -39,6 +37,8 @@ function Share() {
 
                     </Col>
                     <Col xs={9} xl={11} >
+                       
+
                         <div className="text-dark text-align"   >
                             超級好吃~下次要帶家人來吃超級好吃~
                         </div>
@@ -84,23 +84,52 @@ function Share() {
                     </Col>
                     <Col xs={9} xl={11} >
                         <div className="text-dark text-align"   >
+
                             非常驚艷，餐點特別，裝潢時尚，特別推薦海鮮跟甜點鍋餅，紅酒🍷櫻桃鴨非常特別，滿滿的酒香
                         </div>
                     </Col>
 
                 </Row>
 
-                {movieReviewList.map((val)=>{
-                        return <h1> {val.movieName} </h1>
+                <Row className="border border-info p-2 " >
+                    <Col className="border border-info p-1 bg-warning  " xs={3} xl={1}  >
+
+                        <img src={Male} className='userphoto' />
+
+                    </Col>
+                    <Col xs={9} xl={11} >
+                        {movieReviewList.map((val) => {
+                            return <div className="text-dark text-align"   >
+                               {val.movieReview}
+                            </div>;
+                        })}
+                    </Col>
+
+                </Row>
 
 
-                })
 
-                }
 
-           
 
             </Container>
+
+
+            {/* {movieReviewList.map((val) => {
+                return <h1>movieName:{val.movieName}|movieReview:{val.movieReview}</h1>;
+            })} */}
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
     )

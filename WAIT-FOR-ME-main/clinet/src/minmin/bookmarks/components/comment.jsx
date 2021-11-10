@@ -19,7 +19,7 @@ const design = {
 }
 
 const designbut = {
-  marginTop: '35vh',
+  paddingTop: '35vh',
 
 }
 
@@ -46,6 +46,7 @@ function Comment() {
   const [movieName, setMovieName] = useState('');
   const [review, setReview] = useState('');
 
+
   const submitReview = () => {
     Axios.post('http://localhost:3001/comment', {
       movieName: movieName, movieReview: review,
@@ -57,7 +58,8 @@ function Comment() {
   }
 
 
-  // type='text area' 
+
+
 
 
   return (
@@ -106,15 +108,10 @@ function Comment() {
 
           </Col>
 
-
-
-
-
-
-
-
         </Row>
 
+
+       
 
 
    

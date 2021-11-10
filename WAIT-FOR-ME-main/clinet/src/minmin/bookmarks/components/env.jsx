@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col, Container,Carousel,Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 class Env extends React.Component {
     render() {

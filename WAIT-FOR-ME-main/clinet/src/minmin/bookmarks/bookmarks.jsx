@@ -24,89 +24,92 @@ import Eating from './components/icon/Eating.png';
 
 class Bookmarks extends React.Component {
     render() {
+
+
+
         return <Router>
             <div>
-            <Nav fill variant="tabs" defaultActiveKey="/home" >
+                <Nav fill variant="tabs" defaultActiveKey="/home" >
 
-                <Nav.Item   >
-                    
-                    <Nav.Link as={Link} to={'/user-share'}>用戶分享
-                    &nbsp; 
-                    <img src={ Person } alt="Person" />
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link as={Link} to={'/photo-album'} >相片集
-                    &nbsp; 
-                    <img src={ Camera } alt="Camera" />
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link as={Link} to={'/map'} >地圖
-                    &nbsp; 
-                    <img src={ Location } alt="Location" />
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link as={Link} to={'/menu'} >菜單
-                    &nbsp; 
-                    <img src={ Eating } alt="Eating" />
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link as={Link} to={'/env'} >環境資訊
-                    &nbsp; 
-                    <img src={ Shop } alt="Shop" />
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link as={Link} to={'/comment'} >新增評論
-                    &nbsp; 
-                    <img src={ Writing } alt="Writing" />
-                    </Nav.Link>
-                </Nav.Item>
+                    <Nav.Item   >
 
-            </Nav>
+                        <Nav.Link as={Link} to={'/user-share'}>用戶分享
+                            &nbsp;
+                            <img src={Person} alt="Person" />
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link as={Link} to={'/photo-album'} >相片集
+                            &nbsp;
+                            <img src={Camera} alt="Camera" />
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link as={Link} to={'/map'} >地圖
+                            &nbsp;
+                            <img src={Location} alt="Location" />
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link as={Link} to={'/menu'} >菜單
+                            &nbsp;
+                            <img src={Eating} alt="Eating" />
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link as={Link} to={'/env'} >環境資訊
+                            &nbsp;
+                            <img src={Shop} alt="Shop" />
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link as={Link} to={'/comment'} >新增評論
+                            &nbsp;
+                            <img src={Writing} alt="Writing" />
+                        </Nav.Link>
+                    </Nav.Item>
 
-
+                </Nav>
 
 
 
-        </div>
 
-        <div>
-            {/* 引用各個導覽書籤路徑 */}
-            
-            <Switch>
 
-                <Route path='/user-share'>
-                    < Share />
-                </Route>
+            </div>
 
-                <Route path='/photo-album'>
-                    < Photo />
-                </Route>
+            <div>
+                {/* 引用各個導覽書籤路徑 */}
 
-                <Route path='/map'>
-                    < Map />
-                </Route>
+                <Switch>
 
-                <Route path='/menu'>
-                    < Menu />
-                </Route>
+                    <Route path='/user-share'>
+                        < Share />
+                    </Route>
 
-                <Route path='/env'>
-                    < Env />
-                </Route>
+                    <Route path='/photo-album'>
+                        < Photo />
+                    </Route>
 
-                <Route path='/comment'>
-                    < Comment />
-                </Route>
+                    <Route path='/map'>
+                        < Map />
+                    </Route>
 
-             
-            </Switch>
+                    <Route path='/menu'>
+                        < Menu />
+                    </Route>
 
-        </div>
+                    <Route path='/env'>
+                        < Env />
+                    </Route>
+
+                    <Route path='/comment'>
+                        < Comment />
+                    </Route>
+
+
+                </Switch>
+
+            </div>
 
         </Router>
 
