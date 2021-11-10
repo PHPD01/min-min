@@ -29,7 +29,7 @@ function FStarPage(){
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Control as="textarea" rows={3} placeholder="發表評論..." />
             </Form.Group>      
-
+            < CStarIcon/>
             <Stack gap={2} className="col-md-6 mx-auto">
             <Button variant="" type="submit" className=" buttonStyle">
               上傳評論

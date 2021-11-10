@@ -7,10 +7,30 @@ import Woman from './icon/woman.png';
 import Male from './icon/male.png';
 import Female from './icon/female.png';
 
+// 連接資料
 import Axios from 'axios';
+// 星星
+import { FaStar } from 'react-icons/fa';
+
+
+const starDesign = {
+    marign: "20px",
+
+}
+
+
+
+
+
+
+
+
+
 function Share() {
 
     const [movieReviewList, setMovieList] = useState([]);
+    const stars = Array(5).fill();
+
 
 
 
@@ -37,7 +57,7 @@ function Share() {
 
                     </Col>
                     <Col xs={9} xl={11} >
-                       
+
 
                         <div className="text-dark text-align"   >
                             超級好吃~下次要帶家人來吃超級好吃~
@@ -100,9 +120,30 @@ function Share() {
                     <Col xs={9} xl={11} >
                         {movieReviewList.map((val) => {
                             return <div className="text-dark text-align"   >
-                               {val.movieReview}
+                                {val.movieReview}
                             </div>;
                         })}
+
+
+                        <br />
+                        {stars.map((_, index) => {
+                            return (
+                                <FaStar
+                                    style={starDesign}
+                                    color={"#FFDC35"}
+                                    size={30}
+                                    key={index}
+                                />
+                            )
+                        }
+
+                        )}
+
+                     
+
+
+
+
                     </Col>
 
                 </Row>
@@ -117,6 +158,12 @@ function Share() {
             {/* {movieReviewList.map((val) => {
                 return <h1>movieName:{val.movieName}|movieReview:{val.movieReview}</h1>;
             })} */}
+
+
+
+
+
+
 
 
 
