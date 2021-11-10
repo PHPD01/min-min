@@ -1,0 +1,19 @@
+.Comment{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* min-height: 100vh; */
+}
+
+input[type='radio']{
+    display: none;
+}
+
+.Star{
+    cursor: pointer;
+    /* 當滑鼠靠近改變形狀 */
+    transform: color 200ms;
+
+
+    
+}
