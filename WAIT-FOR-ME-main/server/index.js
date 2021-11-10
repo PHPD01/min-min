@@ -54,7 +54,7 @@ app.post("/comment",(req,res)=>{
   
 })
 
-app.get("user-share",(req,res)=>{
+app.get("/user-share",(req,res)=>{
 
   const sqlInsert ="select * from  movie_review "
   conn.query(sqlInsert,(err,result)=>{
